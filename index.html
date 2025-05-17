@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mytask</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <img src="check-icon.svg" alt="Ícone check" />
+        <h1><span class="my">My</span><span class="task">task</span></h1>
+      </div>
+
+      <div class="task-box">
+        <div class="add-task">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Digite sua tarefa..."
+          />
+          <button onclick="addTask()">+</button>
+        </div>
+        <ul id="taskList" class="task-list">
+          <li>
+            <div class="checkbox-container">
+              <label class="checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  onchange="this.closest('li').classList.toggle('completed')"
+                />
+                <span class="custom-checkbox"></span>
+              </label>
+              <span>Terminar tarefa do InCode</span>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox-container">
+              <label class="checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  onchange="this.closest('li').classList.toggle('completed')"
+                />
+                <span class="custom-checkbox"></span>
+              </label>
+              <span>Seguir o nosso instagram @oxygenihub</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
